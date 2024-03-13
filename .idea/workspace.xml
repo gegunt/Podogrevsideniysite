@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f2ea8dd-92c6-4848-9375-b96232aaf753" name="Changes" comment="Ready iteration">
-      <change afterPath="$PROJECT_DIR$/www/media/image.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+    <list default="true" id="4f2ea8dd-92c6-4848-9375-b96232aaf753" name="Changes" comment="Coming soon iteration">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.20.2" />
   <component name="Git.Settings">
@@ -75,7 +82,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="First deploy" />
     <MESSAGE value="Ready iteration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ready iteration" />
+    <MESSAGE value="Coming soon iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coming soon iteration" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
