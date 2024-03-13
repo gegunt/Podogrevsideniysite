@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f2ea8dd-92c6-4848-9375-b96232aaf753" name="Changes" comment="First deploy">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4f2ea8dd-92c6-4848-9375-b96232aaf753" name="Changes" comment="Ready iteration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +66,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="First deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="First deploy" />
+    <MESSAGE value="Ready iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready iteration" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
