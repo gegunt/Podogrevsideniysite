@@ -1,11 +1,29 @@
-version: '3'
+version: '3.9'
 
 services:
-  site:
+  nginx:
     build: ./nginx
-    container_name: nginx_ssl
+    container_name: nginx
+    restart: unless-stopped
     ports:
       - 80:80
       - 443:443
     volumes:
       - ./nginx/www/:/home/web/www
+      - nginx.conf:/etc/nginx/conf.d
+      - etc-letsencrypt:/etc/letsencrypt
+
+
+  certbot:
+    image: certbot/certbot
+    depends_on:
+      - nginx
+    container_name: certbot
+    volumes:
+      - etc-letsencrypt:/etc/letsencrypt
+      - www-html:/var/www/html
+    command: certonly --webroot --webroot-path=/var/www/html --email info@deadlychannel.ru --agree-tos -d deadlychannel.ru
+
+volumes:
+  www-html:
+  etc-letsencrypt:
