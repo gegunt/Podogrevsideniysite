@@ -1,30 +1,21 @@
-version: '3.9'
+version: '3'
 
 services:
   nginx:
-    image: nginx:1.25.4-alpine
-    container_name: nginx
+    image: nginx:1.15-alpine
     restart: unless-stopped
-    ports:
-      - 80:80
-      - 443:443
     volumes:
-      - www-html:/var/www
-      - ./nginx/www/:/home/web/www/
-      - ./nginx/conf/:/etc/nginx/conf.d
-      - etc-letsencrypt:/etc/letsencrypt
-
-
+      - ./data/nginx:/etc/nginx/conf.d
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/site/www:/var/www/certbot
+    ports:
+      - "80:80"
+      - "443:443"
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   certbot:
     image: certbot/certbot
-    depends_on:
-      - nginx
-    container_name: certbot
+    restart: unless-stopped
     volumes:
-      - etc-letsencrypt:/etc/letsencrypt
-      - www-html:/var/www
-    command: certonly --webroot --webroot-path=/var/www --email info@deadlychannel.ru --agree-tos -d deadlychannel.ru
-
-volumes:
-  www-html:
-  etc-letsencrypt:
+      - ./data/site/conf:/etc/letsencrypt
+      - ./data/site/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
