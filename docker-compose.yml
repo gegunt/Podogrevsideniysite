@@ -10,7 +10,7 @@ services:
       - 443:443
     volumes:
       - ./nginx/www/:/home/web/www
-      - nginx.conf:/etc/nginx/conf.d
+      - ./conf/:/etc/nginx/conf.d
       - etc-letsencrypt:/etc/letsencrypt
 
 
