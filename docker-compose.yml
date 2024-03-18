@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  site:
+    build: ./nginx
+    container_name: nginx_ssl
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/www/:/home/web/www
