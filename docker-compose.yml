@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   nginx:
-    build: ./nginx
+    image: nginx:1.25.4-alpine
     container_name: nginx
     restart: unless-stopped
     ports:
